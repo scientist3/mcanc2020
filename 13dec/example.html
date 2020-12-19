@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="scripts.js"></script>
+		<link rel="stylesheet" href="styles.css">
+		<style>
+			*{
+			    box-sizing: border-box;
+			    margin: 0px;
+			    padding: 0px;
+			}
+			header, footer {
+			  padding: 1em;
+			  color: white;
+			  background-color: #007196;
+			  clear: left;
+			  text-align: center;
+			}
+			nav{
+				width: 100%;
+				background-color: #8a7777;
+				height: 37px;
+			}
+			nav>ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				width: inherit;
+				text-align: center;
+			}
+			nav>ul>li{
+				display: inline;
+			}
+			aside {
+			    width: 40%;
+			    padding-left: .10rem;
+			    margin-left: .5rem;
+			    float: left;
+			    box-shadow: inset 5px 0 5px -5px #7e293e;
+			    font-style: italic;
+			    color: #6c297e;
+			    background-color: green;
+			}
+
+			aside > p {
+			    margin: .5rem;
+			}
+
+			p {
+			    font-family: 'Times New Roman', Times, serif;
+			}
+			article{
+				height: 200px;
+				background-color: yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<header style="height: 50px; width: 100%; background-color: #333; text-align: center;">
+			<h1 style="color: white;">I am a header</h1>
+		</header>
+		<nav>
+			<ul >
+				<li><a href="https://www.bitdegree.org/tag/interactive-learning">Gamified Courses</a></li>
+				<li><a href="https://www.bitdegree.org/tutorials">Tutorials</a></li>
+				<li><a href="https://www.bitdegree.org/course/learn-solidity-space-doggos">Space doggo course</a></li>
+				<li><a href="https://www.bitdegree.org/tag/game-dev">Game Dev Courses</a></li>
+			</ul>
+		</nav>
+		<aside > <!-- style="float: right;" -->
+			<p>Many movies and graphic novels have been based on this Greek hero.</p>
+		</aside>
+		<article> <!-- style="float: left;" -->
+			<h1>Fun Fact</h1>
+			<p>Fun fact: most of the fun facts on the Internet are not actually fun.</p>
+		</article>
+
+		<footer style="width: 100%; height: auto; border: 1px solid;">
+			<h1>This is a footer</h1>
+			<p>Copyrights are defined here</p>
+		</footer>
+	</body>
+</html>

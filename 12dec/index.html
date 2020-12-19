@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tables</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function greetme() {
+			alert("Hi All");
+		}
+
+		// greetme();
+	</script>
+	<h1></h1>
+	<!-- Define Table -->
+	<table border="5" style="width:100%;height:400px;"> 
+		<!-- Then Define Number of ROW -->
+		<tr> <!-- Row 1 -->
+			<td colspan="2">Header</td>
+			
+		</tr>
+
+		<tr> <!-- Row 1 -->
+			<td width="25%">
+				<ul>
+					<li><a href="../index.html">Main Page</a></li>
+					<li><a href="./notes.html">Notes</a></li>
+				</ul>
+			</td>
+			<td width="70%">
+				<h2>12 Dec Lecture</h2>
+				
+				<h2>Example of table</h2>
+				
+				<form action="./process.php" method="get">
+				  
+				  <input type="text" id="fname" name="fname" value="John"><br>
+				  <br>
+				  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+				  <input type="submit" value="Submit">
+				</form>
+
+
+				<form action="./process.php" method="post">
+					Firstname: <input type="text" name="fname"><br>
+					Password: <input type="password" ><br>
+					<input type="radio" name="gender" value="1">Male
+					<input type="radio" name="gender" value="0">Female
+					<input type="radio" name="gender" value="other">Other<br>
+					<input type="checkbox" name="subject"> C <br>
+					<input type="checkbox" name="subject"> C++ <br>
+					<input type="checkbox" name="subject"> HTML <br>
+					<br>
+					<input type="submit" value="Save">
+					<br>
+
+					<input type="button" value="button" onclick="greetme();">
+				</form>
+				 <iframe src="./notes.html" title="description"> 
+			</td>
+		</tr>
+
+		<tr> <!-- Row 1 -->
+			<td>Footer</td>
+			<td rowspan="2">Fodfddfsoter</td>
+		</tr>
+		<tr> <!-- Row 1 -->
+			<td >Footer</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+
