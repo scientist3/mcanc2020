@@ -1,0 +1,28 @@
+/* Tag */
+h1,h2{ 
+    background-color: rgb(17, 208, 58);
+    padding-left: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-right: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-top-width: 5px;
+    border-top-style: solid;
+    margin-right: 200px;
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+}
+/* ID */
+#idname{
+    /* property_name:value; */
+    background-color: brown;
+}
+/* Class */
+.classname{
+    background-color: chartreuse;
+}
