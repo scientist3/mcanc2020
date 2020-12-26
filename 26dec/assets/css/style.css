@@ -1,0 +1,53 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  color: #0000ff;
+  font-size: 50px;
+  background-color: black;
+  padding: 10px 20px;
+  /* padding: 10px 20px 30px 40px; */
+  /* text-shadow: 0px 0px yellow; */
+  text-shadow: 3px 10px 6px yellow;
+  margin-bottom: 22px;
+}
+
+div {
+  width: 120px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  background-color: #2be2c5ab;
+  padding: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
+  text-align: center;
+  display: inline;
+  border-left: 4px solid rgb(29, 199, 131);
+}
+
+div:hover {
+  /* background-color: aqua; */
+  box-shadow: 10px 10px 11px rgb(194, 41, 79);
+}
+
+span {
+  background-color: azure;
+  padding: 20px;
+  /* border: 1px solid red; */
+  border: 3px dotted red;
+}
+
+span:hover {
+  border-top: 5px solid yellow;
+  border-radius: 30px;
+}
+
+.grad {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(red, green);
+  /* background-image: linear-gradient(to left bottom, red,white, green); */
+}
