@@ -1,0 +1,153 @@
+<pre>
+    Topic: 
+    0) Other Data types
+        - Array:
+            <ArrayExamples>
+                - Collection Is similar elements (Collection of data items:(Any type))
+                    - similar : Same data types
+                
+            </ArrayExamples>
+        - Objects:
+            <ObjectExamples>
+                hii
+            </ObjectExamples>
+
+    1) Operators
+        - new, delete, this, void
+    2) Statements
+        <statements>
+        - comments
+            <CommentExample>
+            - //  Single line comment
+            - /* 
+                Multi line
+                comment
+              */
+            </CommentExample>
+        - var 
+        - break, continue, return, labelled
+            Example:         
+            <breakExample>
+                {
+                    st1
+                    st2
+                    st3
+                    for{
+                        s1
+                        s2
+                        s3
+                        while(){
+                            s
+                            s
+                            d
+                            continue
+                            break;
+                            h
+                            k
+                            return;
+                        }
+                        Excute start after break is executed
+                    }
+                }
+                HERE:
+
+            continue HERE;
+            </breakExample>
+        - import, export
+        - with: The with statement extends the scope chain for a statement.
+            <withExample>
+            Definition:
+                - The with statement extends the scope chain for a statement. 
+                - The following with statement specifies that the Math object is the default object. 
+                - The statements following the with statement refer to the PI property and the cos and sin methods, without specifying an object. 
+                - JavaScript assumes the Math object for these references.
+            References : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with
+            Example: 
+                var a, x, y;
+                var r = 10;
+                
+                with (Math) {
+                    a = PI * r * r;
+                }
+            </withExample>
+        - Control Statements
+            - if, if else, switch 
+            <ControlStatementExample>
+                if(condition){
+                    // true
+                    if(condition){
+                        // True
+                    }
+                }else{
+                    // False
+                    if(condition){
+                        // True
+                        if(condition){
+                            // True
+                        }
+                    }
+                }
+                
+                var flot= 2.2;
+                
+                switch (flot) {
+                    case 1.1:
+                        console.log("1.1 case");        
+                        break;
+                    case 2.2:
+                        console.log("2.2 case");        
+                        break;
+                    default:
+                        console.log("Default Case");           
+                        break;
+                }
+            </ControlStatementExample>
+        - Looping Statements
+            - while, do while, for , for.. in, for...of
+            Example:
+            <LoopingExample>
+                - do:
+                    var text = "";
+                    var i = 0;
+                    do {
+                        text += "The number is " + i;
+                        i++;
+                    } while (i < 5);
+
+                - while:
+                    var text = "";
+                    var i = 0;
+                    while (i < 5) {
+                        text += "<br>The number is " + i;
+                        i++;
+                    }
+
+                - for:
+                    var text = "";
+                    var i;
+                    for (i = 0; i < 5; i++) {
+                        text += "The number is " + i + "<br>";
+                    }
+
+                - for...in: Loop through the properties of an object
+                    var person = {fname:"John", lname:"Doe", age:25};
+                    var text = "";
+                    var x;
+                    for (x in person) {
+                        text += person[x] + " ";
+                    }
+                    Output of text: John Doe 25
+                - for...of:  Loop through the values of an array
+                    var cars = ['BMW', 'Volvo', 'Mini'];
+                    var x;
+                    
+                    for (x of cars) {
+                        document.write(x + "<br >");
+                    }
+                    Output : 
+                        BMW
+                        Volvo
+                        Mini
+            </LoopingExample>
+        </statements>
+</pre>

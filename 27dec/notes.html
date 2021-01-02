@@ -2,33 +2,121 @@
     Topic: Javascript
     
     0) Variable
-        Which holds a memory address
-        Declare variable:
-            
-            var varname = 12;
-            var strvar = "this is string";
-            type= by its value.
-    Data type - Data format and operation.
+        - Which holds a memory address, where value are stored.
+        - Declare variable:
+            Example:
+                var varname = 12;
+                var strvar = "this is string";
+                type = by its value.
+        -Data type - Data format and operation on that data.
+            var length = 16;                               // Number
+            var lastName = "Johnson";                      // String
+            var x = {firstName:"John", lastName:"Doe"};    // Object
+            NOTE: 
+                - When adding a number and a string, JavaScript will treat the number as a string.
+                - JavaScript has dynamic types. This means that the same variable can be used to hold different data types
+                Example
+                    var x;           // Now x is undefined
+                    x = 5;           // Now x is a Number
+                    x = "John";      // Now x is a String
+                    
+    1) JS Operators -which denotes Operations
+        i. Assignment
+            - sybmol: =
+            - Meaning: used to assign values to a variable.
+            - Example: 
+                Operator	Example	    Same As
+                =	        x = y	    x = y
+                +=	        x += y	    x = x + y
+                -=	        x -= y	    x = x - y
+                *=	        x *= y	    x = x * y
+                /=	        x /= y	    x = x / y
+                %=	        x %= y	    x = x % y
+                **=	        x **= y	    x = x ** y
+        
+        ii. Arithmetic
+            - symbols: +,-, *,/,%,++,--
+            - Meaning : Arithmetic operators are used to perform arithmetic on numbers:
+             Example:
+                Same as above.
 
-    1) JS Operators
-        - Assignment
-            sybmol '='
-        - Comparision
-            ==, > ,<, ! =
-            Equal : == & == =
-        - Arithmetic
-            +,-,*,/
-        - Logical
-            - &&,|| !
+        iii. Comparision
+            - Symbols: 
+                Operator	Description
+                ---------------------------------------
+                ==	        equal to
+                ===	        equal value and equal type
+                !=	        not equal
+                !==	        not equal value or not equal type
+                >	        greater than
+                <	        less than
+                >=	        greater than or equal to
+                <=	        less than or equal to
+                ?	        ternary operator
+                ---------------------------------------
+            - Meaning: 
+            - Example: 
+        
+        iv. Logical
+            - sybmol: 
+            Operator	Description
+            -----------------------
+            &&	        logical and
+            ||	        logical or
+            !	        logical not
+            -----------------------
+            - Meaning: 
+            - Example:
 
-        - String
-            + it will concatinate.
-        -
-    2) Functions 
-    3) Decesion Conditional statements
-        - Branching/Flow control statements (only way , 2 ways and multi ways)
-            if, if else, switch
+        vi. Bitwise
+            Oper  Desc	                Example	    Same as	    Result	    Decimal
+            &	  AND	                5 & 1	    0101 & 0001	0001	1
+            |	  OR	                5 | 1	    0101 | 0001	0101	5
+            ~	  NOT	                ~ 5	        ~0101	    1010	10
+            ^	  XOR	                5 ^ 1	    0101 ^ 0001	0100	4
+            <<	  Zero fill left shift	5 << 1	    0101 << 1	1010	10
+            >>	  Signed right shift	5 >> 1	    0101 >> 1	0010	2
+            >>>	  Zero fill right shift	5 >>> 1	    0101 >>> 1	0010	2
+
+        v. String
+            - Sybmols: +
+            - Meaning: string concatenation.
+            - Example: 
+                var txt1 = "John";
+                var txt2 = "Doe";
+                var txt3 = txt1 + " " + txt2;
+                Result of txt3 will be: John Doe
+    2) Functions:
+        - Meaning:
+        - Syntax: 
+            function funName(arglist){
+                statements
+            }
+        - Example:
+            function findGreatestNumber(a, b, c) {
+               if (a > b && a > c) {
+                 console.log("A >>>");
+               } else if (b > c) {
+                 console.log("B >>>");
+               } else {
+                 console.log("C >>>");
+               }
+            }
+    3) Control Statements
+        - Branching
+            -Types:
+                - 1 way
+                    - if
+                - 2 way
+                    - if else
+                - Multi Way
+                    - switch
+            Example: 
         - Looping control statements
+            - Entry Control:
+                - while, for, 
+            - Exit Control:
+                - do while
 </pre>
 relational expression x>y x>= y to combine two rel expression, use Logical
 Operators & 1 && 1 = 1 1 && 0 =
