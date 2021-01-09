@@ -1,35 +1,75 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Main Page</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <h2 class="title">Menu</h2>
-      <ul>
-        <li>
-          <a href="./5dec/index.html"> 5 Dec</a>
-        </li>
-        <li>
-          <a href="./6dec/index.html"> 6 Dec</a>
-        </li>
-        <li>
-          <a href="./12dec/index.html"> 12 Dec</a>
-        </li>
-        <li>
-          <a href="./5dec/index.html"> 5 Dec</a>
-        </li>
-        <li>
-          <a href="./5dec/index.html"> 5 Dec</a>
-        </li>
-        <li>
-          <a href="./5dec/index.html"> 5 Dec</a>
-        </li>
-        <li>
-          <a href="./26dec/index.html"> 26 Dec CSS</a>
-        </li>
-      </ul>
-    </div>
-  </body>
+	<head>
+		<title>Main Page</title>
+		<link
+			rel="stylesheet"
+			href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+		/>
+		<link rel="stylesheet" href="/resources/demos/style.css" />
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script>
+			$(function () {
+				$("#menu").menu({
+					items: "> :not(.ui-widget-header)",
+				});
+			});
+		</script>
+		<style>
+			.ui-menu {
+				width: 200px;
+			}
+			.ui-widget-header {
+				padding: 0.2em;
+			}
+		</style>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="header">
+			<h2 class="title">Menu</h2>
+
+			<ul id="menu">
+				<li class="ui-widget-header"><div>Syllabus</div></li>
+				<li>
+					<div><a href="./MCA FULL Syllabus 2018 (3).pdf">MCA SYLLABUS</a></div>
+				</li>
+				<li class="ui-widget-header"><div>Sessions</div></li>
+				<li>
+					<div><a href="./5dec/index.html"> 5 Dec</a></div>
+				</li>
+				<li>
+					<div><a href="./5dec/index.html"> 5 Dec</a></div>
+				</li>
+				<li>
+					<div><a href="./5dec/index.html"> 5 Dec</a></div>
+				</li>
+			</ul>
+			<!-- <ul>
+				<li><a href="./MCA FULL Syllabus 2018 (3).pdf">MCA SYLLABUS</a></li>
+				<li>
+					<a href="./5dec/index.html"> 5 Dec</a>
+				</li>
+				<li>
+					<a href="./6dec/index.html"> 6 Dec</a>
+				</li>
+				<li>
+					<a href="./12dec/index.html"> 12 Dec</a>
+				</li>
+				<li>
+					<a href="./5dec/index.html"> 5 Dec</a>
+				</li>
+				<li>
+					<a href="./5dec/index.html"> 5 Dec</a>
+				</li>
+				<li>
+					<a href="./5dec/index.html"> 5 Dec</a>
+				</li>
+				<li>
+					<a href="./26dec/index.html"> 26 Dec CSS</a>
+				</li>
+			</ul> -->
+		</div>
+	</body>
 </html>

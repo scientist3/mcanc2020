@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				// click event
+				// function(){
+				// Event handler
+				// }
+				$("p").click(function () {
+					$(this).hide();
+				});
+
+				// One more event
+				$("button").click(function () {
+					$("#id1").css("font-size", "30px");
+				});
+			});
+
+			// $(document).ready(function () {
+			// document.getElementsByName('p'); ==== $('p');
+
+			// 	$("button").click(function () {
+			// 		$("#id1").css({
+			// 			"background-color": "green",
+			// 			"font-size": "200%",
+			// 			color: "white",
+			// 		});
+			// 		//$("#id1").css({"font-size", "30px","background-color", "green"});
+			// 		// $("#id1").css("background-color", "green");
+			// 	});
+			// });
+		</script>
+	</head>
+	<body>
+		<p>If you click on me, I will disappear.</p>
+		<p id="id1">Click me away!</p>
+		<p>Click me too!</p>
+
+		<button>Set background-color of p</button>
+	</body>
+</html>
