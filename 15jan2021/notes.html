@@ -1,0 +1,33 @@
+<pre>
+  Topic :
+    - PHP 
+    - Server-side web scripting, - Installing PHP, 
+      
+    - Adding PHP to How PHP scripts work ,
+      
+      -(Client) Browser request (URL:localhost/pathOfFileWithExtension)
+        -> (Server) Apache(XAMP) - Accepts the request and Locates the requested file in %driveXampIsInstalled%/xampp/htdocs/pathOfFileWithExtension
+          -> PassesThisFileThrough "xampp/php/php.exe" * - which processes the php code in this file and generates the result code(HTML) which you may call as DATA.
+            -> return the result code or DATA.
+
+      -> (Client) Browser recieves the Data, interprets the data and displays the data with effects.
+      
+      - This the complete cycle From Request To Response of PHP scritp
+
+      Note for asterisk(*)
+      * In this phase php file is compiled first then interpreted. 
+        Only that Process Data is sent back which we want to Output by using output function like echo.
+       
+      
+    -Basic PHP syntax ,
+      <?php
+        // php instructions.
+      ?>
+    
+    
+    Processing : 
+      - 2+2 = 4
+
+    1) Start your xamp server.
+    2) Always use .php extension
+</pre>
