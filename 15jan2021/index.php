@@ -10,7 +10,6 @@
   
   <?php 
     echo "<h2>Im in the php code block.</h2>";
-
   ?>
 
 
