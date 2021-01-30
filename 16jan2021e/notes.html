@@ -1,0 +1,51 @@
+<pre>
+  Topic: 
+  -Program Flow Control structures/ statemants/ instructions
+    <Control>
+    -Conditional Statements (If, If else and Switch)
+      - perform different actions for different conditions.
+      -In PHP we have the following conditional statements:
+
+      * if statement - executes some code if one condition is true
+      if...else statement - executes some code if a condition is true and another code if that condition is false
+      
+      * if...elseif...else statement - executes different codes for more than two conditions
+      
+      *switch statement - selects one of many blocks of code to be executed
+    </Control>
+    <Looping>
+    -Loops 
+      - In PHP, we have the following loop types:
+
+      * while - loops through a block of code as long as the specified condition is true
+        - Syntax
+          while (condition is true) {
+            code to be executed;
+          }
+      * do...while - loops through a block of code once, and then repeats the loop as long as the specified condition is true
+        - Syntax
+          do {
+            code to be executed;
+          } while (condition is true);
+      
+      * for - loops through a block of code a specified number of times
+        - Syntax
+          for (init counter; test counter; increment counter) {
+            code to be executed for each iteration;
+          }
+
+      * foreach - loops through a block of code for each element in an array
+        - Syntax
+          foreach ($array as $value) {
+            code to be executed;
+          }
+        - Example
+          <?php
+            $colors = array("red", "green", "blue", "yellow");
+
+            foreach ($colors as $value) {
+              echo "$value <br>";
+            }
+          ?>
+    </Looping>
+</pre>

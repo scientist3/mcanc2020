@@ -1,0 +1,96 @@
+<pre>
+  Topic : 
+    - Basic PHP errors / problems:
+        - <Definition>:
+          * Error is the fault or mistake in a program
+
+          *Error can occur due to wrong syntax or wrong logic.
+          </Definition>
+        - <Types>:
+            - Many types of errors, classified into following:
+
+            * Syntax/Parse Error:
+              - error done by the programmer
+              <example>
+                < ?php 
+                  $x = "North Campus"; 
+                  y = "Error in Definig Variable"; 
+                  echo $x; 
+                  echo $y; 
+                ?> 
+              </example>
+
+            * Fatal Error:
+              - type of error where PHP compiler understand the PHP code but it recognizes an undeclared function
+              <example>
+                < ?php 
+                  function add($x, $y) 
+                  { 
+                    $sum = $x + $y; 
+                    echo "sum = " . $sum; 
+                  } 
+                  $x = 0; 
+                  $y = 20; 
+                  add($x, $y); 
+                  diff($x, $y);// Error 
+                  ?> 
+              </example>
+            
+            * Warning Errors :
+              - The main reason of warning errors are including a missing file.
+              <example>
+                <?php 
+                  $x = "GeeksforGeeks"; 
+                  include ("gfg.php"); 
+                  echo $x . "Computer science portal"; 
+                ?> 
+              </example>
+
+            * Notice Error: 
+              - It is similar to warning error. It means that the program contains something wrong but it allows the execution of script.
+              <example>
+                <?php 
+                $x = "GeeksforGeeks"; 
+                echo $x; 
+                echo $geeks; 
+                ?>
+              </example>
+
+          </Types>
+    - Working with Forms:
+        <example>
+
+        </example>
+    - Designing a Form:
+        <example>
+
+        </example>
+    - $_GET and $_POST:
+        <example>
+
+        </example>
+    - HTML and PHP code:
+        <example>
+
+        </example>
+    - User Input:
+        <example>
+
+        </example>
+    - Form Validation:
+        <example>
+
+        </example>
+    - Cookies:
+        <example>
+
+        </example>
+    - File uploading:
+        <example>
+
+        </example>
+    - Sessions: 
+        <example>
+          
+        </example>
+</pre>
