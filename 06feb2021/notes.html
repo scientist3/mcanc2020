@@ -1,0 +1,84 @@
+<pre>
+  Topic:
+  A) File uploading:
+    -With PHP, it is easy to upload files to the server.
+    <PointsAboutFileUploading>
+      - In your "php.ini" file, search for the file_uploads directive, and set it to On:
+      <FindInPHP.INI> file_uploads=On </FindInPHP.INI>
+      
+      - Make sure that the form uses method="post"
+      
+      - The form also needs the following 
+        <form ... enctype="multipart/form-data"> 
+      
+      - It specifies which content-type to use when submitting the form.
+
+      - input type="file"
+
+    </PointsAboutFileUploading>
+    
+    <FileUploadLocalURL>
+      - http://127.0.0.1/mcanc2020/30jan2021e/uploading/uploadform.php
+    </FileUploadLocalURL>
+    
+  B) Cookies:
+      <Definition>
+        - A cookie is a small file that the server embeds on the user's computer. 
+        
+        - Each time the same computer requests a page with a browser, it will send the cookie too. 
+        - With PHP, you can both create and retrieve cookie values.
+      </Definition>
+      
+      <CreateCookie>
+        <Syntax>
+          - setcookie(name, value, expire, path, domain, secure, httponly);
+          
+        </Syntax>
+        <Example>
+          $cookie_name = "c_name";
+          $cookie_value = "Cookie Value";
+          setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); 
+          // 86400 = 1 day
+        </Example>
+      </CreateCookie>
+      
+      <AccessCookie>
+        - $_COOKIE['c_name'])
+      </AccessCookie>
+      
+      <CheckCookieExists>
+        - isset($_COOKIE['c_name'])
+      </CheckCookieExists>
+      
+      <DeleteCookie>
+        - Just set the past time.
+        <Example>
+          -set the expiration date to one hour ago
+          setcookie("c_name", "", time() - 3600);
+        </Example>
+      </DeleteCookie>
+      
+      <CompleteExample>
+        <?php
+            $cookie_name = "user";
+            $cookie_value = "Alex Porter";
+            
+            /******************************* Create **/
+            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+            ?>
+            
+            /*********************** Check and access **/
+            if(!isset($_COOKIE[$cookie_name])) {
+              echo "Cookie named '" . $cookie_name . "' is not set!";
+            } else {
+              echo "Cookie '" . $cookie_name . "' is set!<br>";
+              echo "Value is: " . $_COOKIE[$cookie_name];
+            }
+
+            /******************************* Destroy **/
+            setcookie("user", "", time() - 3600);
+          ?>
+      </CompleteExample>
+  C) 
+    
+</pre>

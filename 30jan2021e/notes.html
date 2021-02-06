@@ -1,0 +1,83 @@
+<pre>
+  Topic : 
+    - $_GET and $_POST:
+      - Both GET and POST create an array (e.g. array( key1 => value1, key2 => value2, key3 => value3, ...)). 
+        - This array holds key/value pairs, 
+          * where keys are the names of the form controls and 
+          * values are the input data from the user.
+      - Both GET and POST are treated as $_GET and $_POST.
+        - These are superglobals, which means that they are always accessible, regardless of scope
+          * you can access them from any function, class or file without having to do anything special.
+
+      - $_GET is an array of variables passed to the current script via the URL parameters.
+        * Information sent from a form with the GET method is visible to everyone 
+          (all variable names and values are displayed in the URL).
+        * GET also has limits on the amount of information to send. 
+        * The limitation is about 2000 characters.
+        * GET may be used for sending non-sensitive data.
+
+      - $_POST is an array of variables passed to the current script via the HTTP POST method.
+        * Information sent from a form with the POST method is invisible to others 
+          (all names/values are embedded within the body of the HTTP request)
+        * POST has no limits on the amount of information to send.
+        * POST supports advanced functionality such as support for multi-part binary input 
+          while uploading files to server.
+
+        <example>
+
+        </example>
+    - HTML and PHP code:
+        <example>
+
+        </example>
+    - User Input:
+        <example>
+
+        </example>
+    - Form Validation:
+        <example>
+          <php
+            // define variables and set to empty values
+            $name = $email = $gender = $comment = $website = "";
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+              $name = test_input($_POST["name"]);
+              $email = test_input($_POST["email"]);
+              $website = test_input($_POST["website"]);
+              $comment = test_input($_POST["comment"]);
+              $gender = test_input($_POST["gender"]);
+            }
+
+            function test_input($data) {
+              $data = trim($data);
+              $data = stripslashes($data);
+              $data = htmlspecialchars($data);
+              return $data;
+            }
+            ?>
+        </example>
+    - Cookies:
+        <example>
+
+        </example>
+    - File uploading:
+        <example>
+
+        </example>
+    - Sessions: 
+
+        // redirect to another page 
+        header("Location:pagename.php");
+        <example>
+          // Starting the session
+          session_start();
+
+          // Using the session data
+          $_SESSION["favcolor"] = "yellow";
+          print_r($_SESSION);
+          
+          // destroy the session
+          session_unset();
+          session_destroy();
+        </example>
+</pre>
