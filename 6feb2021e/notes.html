@@ -1,0 +1,317 @@
+<pre>
+  Topic:
+  a) How to PHP MySQL Integration Works?
+    <def>
+      * With PHP, you can connect to and manipulate databases.
+      * MySQL is the most popular database system used with PHP.
+
+      * PHP + MySQL Database System
+        - PHP combined with MySQL are cross-platform 
+          (you can develop in Windows and serve on a Unix platform)
+    </def>
+  b) What is MySQL?
+    <def>
+      * MySQL is a database system used on the web
+      * MySQL is a database system that runs on a server
+      * MySQL is ideal for both small and large applications
+      * MySQL is very fast, reliable, and easy to use
+      * MySQL uses standard SQL
+      * MySQL is free to download and use
+      * MySQL is developed, distributed, and supported by Oracle Corporation
+
+      * The data in a MySQL database are stored in tables. 
+      * A table is a collection of related data, and it consists of columns and rows.
+    </def>
+  c) PHP Connect to MySQL
+    <def>
+      * PHP 5 and later can work with a MySQL database using:
+        * MySQLi extension (the "i" stands for improved)
+          *Can Use this in two ways:
+            * MySQLi (object-oriented) *** We Will Use This***
+            * MySQLi (procedural)
+        * PDO (PHP Data Objects)
+        
+        * Earlier versions of PHP used the MySQL extension.
+    </def>
+  d) Open a Connection to MySQL
+      * Example (MySQLi Object oriented)
+        <example>
+          <?php
+            $servername = "localhost";
+            $username = "username";
+            $password = "password";
+
+            // Create connection
+            $conn = new mysqli($servername, $username, $password);
+
+            // Check connection
+            if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+            }
+            echo "Connected successfully";
+            ?>
+        </example>
+      * Example (MySQLi Procedural)
+        <example>
+          <?php
+            $servername = "localhost";
+            $username = "username";
+            $password = "password";
+
+            // Create connection
+            $conn = mysqli_connect($servername, $username, $password);
+
+            // Check connection
+            if (!$conn) {
+              die("Connection failed: " . mysqli_connect_error());
+            }
+            echo "Connected successfully";
+            ?>
+        </example>
+  e) Close the Connection
+      * The connection will be closed automatically when the script ends. 
+      * To close the connection before, use the following:
+        <example>
+        * MySQLi Object-Oriented:
+            $conn->close();
+
+        * MySQLi Procedural:
+            mysqli_close($conn);
+        </example>
+  f) Selecting the DB
+      <def>
+      * MySQLi Object-Oriented:
+          // Select/Change db to "test" db
+          $mysqli -> select_db("test");
+      *  MySQLi Procedural:
+          mysql_select_db( 'TUTORIALS' );
+      </def>
+
+  g) Basics of SQL:
+      <def>
+        * SQL stands for Structured Query Language.
+        * SQL is a standard language for 
+          - storing, 
+          - manipulating and 
+          - retrieving data in databases.
+
+        *  SQL is a database language, 
+          - it is used for database 
+            - creation, 
+            - deletion, 
+            - fetching data, 
+            - modifying data,
+            - deleting data...
+      </def>
+  h) SQL Commands & Types of SQL Commands With Syntax
+      <def>
+        * SQL commands are instructions. 
+        * Used to communicate with the database. 
+        * Used to perform specific tasks, functions, and queries of data.
+
+        * SQL can perform various tasks like 
+          - create a table, 
+          - add data to tables, 
+          - drop the table, 
+          - modify the table, 
+          - set permission for users.
+      </def>
+      <TypesOfSQLComands>
+        <Sourcess>
+          - https://www.javatpoint.com/dbms-sql-command#:~:text=Types%20of%20SQL%20Commands,DCL%2C%20TCL%2C%20and%20DQL.
+        </Sourcess>
+        * There are five types of SQL commands: 
+          - DDL: Data Definition Language
+            <def>
+              * DDL changes the structure of the table like 
+              - creating a table, 
+              - deleting a table, 
+              - altering a table, etc.
+            </def>
+            <CommandsDDL>
+              Here are some commands that come under DDL:
+                -CREATE
+                  <Def>
+                    -create a new table in the database.
+                  </Def>
+                  <Syntax>
+                    CREATE TABLE TABLE_NAME (COLUMN_NAME DATATYPES[,....]);  
+                  </Syntax>
+                  <Example>
+                    CREATE TABLE EMPLOYEE(Name VARCHAR2(20), Email VARCHAR2(100), DOB DATE);  
+                  </Example>
+                -ALTER
+                  <Def>
+                    - alter the structure of the database.
+                      - Add column
+                      - Update,etc
+                  </Def>
+                  <Syntax>
+                    To add a new column in the table
+                      ALTER TABLE table_name ADD column_name COLUMN-definition;    
+                    To modify existing column in the table:
+                      ALTER TABLE MODIFY(COLUMN DEFINITION....);  
+                  </Syntax>
+                  <Example>
+                    ALTER TABLE STU_DETAILS ADD(ADDRESS VARCHAR2(20));  
+                    ALTER TABLE STU_DETAILS MODIFY (NAME VARCHAR2(20));  
+                  </Example>
+                -DROP
+                  <Def>
+                    - delete both the structure and record stored in the table.
+                  </Def>
+                  <Syntax>
+                    DROP TABLE tablename;  
+                  </Syntax>
+                  <Example>
+                    DROP TABLE EMPLOYEE;  
+                  </Example>
+                -TRUNCATE
+                  <Def>
+                    - delete all the rows from the table and free the space containing the table.
+                  </Def>
+                  <Syntax>
+                    TRUNCATE TABLE table_name;  
+                  </Syntax>
+                  <Example>
+                    TRUNCATE TABLE EMPLOYEE;  
+                  </Example>
+            </CommandsDDL> 
+          - DML: Data Manipulation Language
+            <Def>
+              - DML commands are used to modify the data stored database.
+            </Def>
+            <CommandsDML>
+              * some commands that come under DML:
+                  INSERT:
+                    <def>
+                      -used to insert data into the row of a table.
+                    </def>
+                    <SyntaxAndExample>
+                      INSERT INTO TABLE_NAME 
+                        (col1, col2, col3,.... col N)  
+                        VALUES (value1, value2, value3, .... valueN);
+                      INSERT INTO javatpoint (Author, Subject) VALUES ("Sonoo", "DBMS");    
+                    </SyntaxAndExample>
+                  UPDATE:
+                    <Def>
+                      -used to update or modify the value of a column in the table.
+                    </Def>
+                    <SyntaxAndExample>
+                      UPDATE table_name 
+                        SET [column_name1= value1,...column_nameN = valueN]   
+                            [WHERE CONDITION]
+                      
+                      UPDATE students    
+                      SET User_Name = 'Sonoo'    
+                      WHERE Student_Id = '3'   
+                    </SyntaxAndExample>
+                  DELETE:
+                    <Def>
+                      - used to remove one or more row from a table.
+                    </Def>
+                    <SyntaxAndExample>
+                      DELETE FROM table_name [WHERE condition];  
+
+                      DELETE FROM javatpoint  
+                        WHERE Author="Sonoo";  
+                    </SyntaxAndExample>
+            </CommandsDML>
+          - DCL: Data Control Language
+            <Def>  
+              - used to grant and take back authority from any database user.
+              - Grant
+              - Revoke
+            </Def>  
+          - TCL: Transaction Control Language
+            <Def>
+              COMMIT
+              ROLLBACK
+              SAVEPOINT
+            </Def>
+          - DQL: Data Query Language
+            <Def>
+              -DQL is used to fetch the data from the database.
+            </Def>
+            <CommandsDQL>
+              * It uses only one command:
+              SELECT
+                <Syntax>
+                  SELECT expressionsOrColumnsNames    
+                  FROM TABLES    
+                  WHERE conditions;  
+                </Syntax>
+                <Example>
+                  SELECT emp_name  
+                  FROM employee  
+                  WHERE age > 20;  
+                </Example>
+            </CommandsDQL>
+      </TypesOfSQLComands>  
+  i) SQL Syntax:
+      
+
+
+<Extra>
+  * Run SQL Commands in CMD
+    ** Connect to mysql
+    ** Create Database
+    ** List Databases
+    ** Use Database
+    ** Create Table
+    ** List Tables
+    ** Describe Table Structure
+
+  ** To Run mysql in cmd :
+      path to mysql> mysql.exe -u root 
+
+  *** 
+    MariaDB [(none)]> show databases;
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | information_schema |
+    | mysql              |
+    | performance_schema |
+    | phpmyadmin         |
+    | razorpay_db        |
+    | sparkcar_db        |
+    | test               |
+    +--------------------+
+    7 rows in set (0.001 sec)
+  ***
+    mysql> CREATE DATABASE Students;
+  
+  ***
+    mysql> USE Students
+  
+    MariaDB [(none)]> use students
+      Database changed
+    mysql> CREATE TABLE Information (firstname VARCHAR(20),lastname VARCHAR(20),gender CHAR(1),grade INT(10), dob DATE);
+    
+    mysql> SHOW TABLES;
+  ***
+    MariaDB [students]> show tables;
+      +--------------------+
+      | Tables_in_students |
+      +--------------------+
+      | information        |
+      +--------------------+
+      1 row in set (0.001 sec)
+
+    mysql> DESCRIBE Information;
+  ***
+    MariaDB [students]> DESCRIBE Information;
+    +-----------+-------------+------+-----+---------+-------+
+    | Field     | Type        | Null | Key | Default | Extra |
+    +-----------+-------------+------+-----+---------+-------+
+    | firstname | varchar(20) | YES  |     | NULL    |       |
+    | lastname  | varchar(20) | YES  |     | NULL    |       |
+    | gender    | char(1)     | YES  |     | NULL    |       |
+    | grade     | int(10)     | YES  |     | NULL    |       |
+    | dob       | date        | YES  |     | NULL    |       |
+    +-----------+-------------+------+-----+---------+-------+
+    5 rows in set (0.031 sec)
+</Extra>
+
+</pre>
