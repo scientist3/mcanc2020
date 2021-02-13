@@ -32,13 +32,13 @@ if(isset($_POST['login'])){
     $row = $result->fetch_assoc();
     //print_r($row);
     //die();
-    $_SESSION['login_status'] = true;
+    $_SESSION['login_status'] = 1;
     $_SESSION['login_message']="Login Sucessful";
     $_SESSION['login_user_data'] = $row;
     header("Location:index.php");
   }else{
-    $_SESSION['login_status'] = false;
-    $_SESSION['login_message']="Login Failed. Username or password is incorrect.";
+    $_SESSION['login_status'] = 0;
+    $_SESSION['login_message']="Login Failed. <br>Username or password is incorrect.";
     header("Location:index.php");
   }
 }else{

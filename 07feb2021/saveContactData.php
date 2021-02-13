@@ -4,8 +4,8 @@ session_start();
 if(isset($_POST['save_contact'])){
   
   // Verify the incomming Data form FORM.
-  //print_r($_POST);
-  //die();
+  // print_r($_POST);
+  // die();
   // Get DB Connection Object
   include_once('dbconnect.php');
   //print_r($conn);
@@ -15,17 +15,22 @@ if(isset($_POST['save_contact'])){
   $cmobile = $_POST['mobile'];
 
   $_SESSION['v_status'] = true;
-  
+  $_SESSION['v_msg'] = null;
+
   /// Validation Section
   if(empty($cname)){
     $_SESSION['v_status'] = false;
     $_SESSION['v_msg'] = "Please Enter Your name";
-    //die();
+  }
+
+  if(empty($cmobile)){
+    $_SESSION['v_status'] = false;
+    $_SESSION['v_msg'] = "Please Enter Your mobile";
   }
 
   if($_SESSION['v_status']== true){
     // Prepare Query
-    $sql = "INSERT INTOo `contact` 
+    $sql = "INSERT INTO `contact` 
                 (`id`, `name`, `mobile`, `doc`, `dou`, `status`) 
           VALUES (NULL, '".$cname."', '".$cmobile."', current_timestamp(), NULL, '1')";
     
@@ -39,5 +44,5 @@ if(isset($_POST['save_contact'])){
   }
   header("Location:index.php");
 }else{
-  //header("Location:index.php");
+  header("Location:index.php");
 }

@@ -17,14 +17,14 @@
       <button type="submit" class="btn btn-dark float-right" name="login">Login</button>
     </form>
   </div>
-  <div class="card-footer bg-success
-    <?php echo (isset($_SESSION['login_status'])? $_SESSION['login_status']:false) ? 'danger' : 'success'; ?>">
-    <?php
-      print_r($_SESSION);
-      if(isset($_SESSION['login_status'])){
-        if($_SESSION['login_status'] == false)
+  <?php if( isset( $_SESSION['login_status'] )) {?>
+  <div class="card-footer text-white text-center
+    <?php echo !$_SESSION['login_status']? 'bg-danger' : 'bg-success'; ?>">
+    <?php 
+        if($_SESSION['login_status'] == false ) {
           echo $_SESSION['login_message'];
-      }
+        }
     ?>
   </div>
+  <?php }?>
 </div>
