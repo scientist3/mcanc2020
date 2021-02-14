@@ -1,0 +1,8 @@
+ALTER TABLE `login_tbl` ADD `dumy` VARCHAR(20) NOT NULL AFTER `status`;
+
+ALTER TABLE `login_tbl` CHANGE `dumy` `dumyy` VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL;
+
+ALTER TABLE `login_tbl` DROP `dumyy`;
+
+// Deleting Table
+DROP TABLE ` ddd `

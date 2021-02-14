@@ -23,7 +23,9 @@
 <body>
 <div class="container">
 <script>
-  // swal ( "Oops" ,  "Something went wrong!" ,  "error" );
+  //swal ( "Oops" ,  "Something went wrong!" ,  "error" );
+
+  //swal("Good job!", "You clicked the button!", "success");
 
   // swal({
   //   title: "Good job!",

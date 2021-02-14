@@ -1,9 +1,15 @@
 <?php
+  
   // Get DB Connection Object
   include_once('dbconnect.php');
 
+  $keyword = $_POST['keyword'];
+
   // Prepare Query
-  $sql = "SELECT * FROM `contact`";
+  $sql = "SELECT *  
+          FROM `contact` 
+          WHERE `name`    LIKE '%".$keyword."%' 
+          OR    `mobile`  LIKE '%".$keyword."%'";
   
   // Query/Fetch Data =>  Database
   $result = $conn->query($sql);
@@ -36,8 +42,8 @@
     }
   }else{
     echo "
-          <tr>
-            <td class='text-center' colspan='5'>No Data Available</td>
+          <tr class='table-danger text-dark'>
+            <td class='text-center' colspan='5'><b>Search with different criteria.</b></td>
           </tr>    
     ";
   }

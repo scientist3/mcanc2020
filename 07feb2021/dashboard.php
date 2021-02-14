@@ -4,6 +4,7 @@
   include('carousel.php'); 
   include('valid_msg.php'); 
   include('add_contact_form.php'); 
+  include('search_contact_form.php'); 
   include('show_contacts.php');
   include('footer.php');
 ?>

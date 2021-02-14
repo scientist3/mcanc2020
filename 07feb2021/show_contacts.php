@@ -11,7 +11,7 @@
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="contact_list">
           <?php include('getContactData.php'); ?>
         </tbody>
       </table>
